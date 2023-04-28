@@ -28,9 +28,11 @@ export class AppComponent {
 
   operaciones(signo:string):void{
 
+    this.pantalla = "";
+
     if(this.signo === ""){
 
-      this.resultado = parseFloat(this.pantalla);
+      this.resultado = this.acumulador;
 
     } 
       else if(this.signo === "+"){
@@ -49,8 +51,6 @@ export class AppComponent {
       this.acumulador = 0;
     
       this.signo = signo;
-
-      this.pantalla = "";
   }
 
   igual():void{
